@@ -1,0 +1,113 @@
+.app {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.page {
+    display: flex;
+    max-width: 1024px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dashboard_list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+.dashboard-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.weather {
+    height: 125px;
+    position: relative;
+    border: 1px solid #bbb;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather__delete {
+    display: none;
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    color: red;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    background: white;
+    padding: 0 5px;
+}
+
+.weather:hover .weather__delete {
+    display: block;
+}
+
+.progress {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto;
+    -webkit-animation: clockwise 1s linear infinite;
+    animation: clockwise 1s linear infinite;
+    border-color: #0090ff rgba(0, 144, 255, 0.75) rgba(0, 144, 255, 0.5) rgba(0, 144, 255, 0.25);
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 9px;
+}
+
+@-webkit-keyframes clockwise {
+    to {
+        -webkit-transform: rotate(360deg) translateZ(0);
+        transform: rotate(360deg) translateZ(0);
+    }
+}
+
+@keyframes clockwise {
+    to {
+        -webkit-transform: rotate(360deg) translateZ(0);
+        transform: rotate(360deg) translateZ(0);
+    }
+}
+
+.message {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 8px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    background: rgba(237, 20, 56, 0.05);
+    border-color: #ed1438;
+    color: #ed1438;
+    margin-top: 10px;
+}
